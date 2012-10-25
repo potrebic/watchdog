@@ -68,7 +68,6 @@ class TestPollingEmitterSimple(unittest2.TestCase):
   def tearDown(self):
     global temp_dir
     rm(temp_dir, True)
-    pass
 
   def collect_results(self):
     sleep(0.5)

@@ -20,11 +20,6 @@
 import os
 import unittest2
 
-#try:
-#  import queue  # IGNORE:F0401
-#except ImportError:
-#  import Queue as queue  # IGNORE:F0401
-
 from time import sleep
 from tests.shell import\
   mkdir,\
@@ -55,14 +50,9 @@ class TestPollingEmitterSimple(unittest2.TestCase):
     global temp_dir
     temp_dir = mkdtemp()
 
-  def start(self):
-    global temp_dir
-
   def tearDown(self):
     global temp_dir
     rm(temp_dir, True)
-    pass
-
 
   def verify_equivalent_sequences(self, seq1, seq2):
     self.assertEqual(len(seq1), len(seq2))
